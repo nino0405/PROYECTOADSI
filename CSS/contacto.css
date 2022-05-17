@@ -1,0 +1,143 @@
+.contacto_container {
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+
+/*============= ASIDE =============*/
+
+.contacto_aside {
+    background: var(--color-primary);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 10rem;
+}
+
+.aside_image {
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+
+.contacto_aside h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contacto_aside p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.contacto_details li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contacto_socials {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+
+.contacto_socials a {
+    background: var(--color-bg2);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.contacto_socials a:hover {
+    background: transparent;
+}
+
+
+/*============== FORMULARIO==================*/
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+
+.form_nombre {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.contact_form input[type="text"] {
+    width: 50%;
+    border-radius: 1rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg2);
+    color: var(--color-white);
+    border-radius: 1rem;
+}
+
+.contact_form .btn {
+    width: max-content;
+    cursor: pointer;
+    margin-top: 1rem;
+    color: var(--color-white);
+    border-radius: 1rem;
+    /*color: aquamarine;*/
+    background-color: var(--color-danger);
+    position: right;
+}
+
+
+/*============ ==============*/
+
+@media screen and (max-width: 1024px) {
+    .contact {
+        padding-bottom: 0;
+    }
+    .contacto_container {
+        gap: 1, 5rem;
+        margin-top: 3rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+    .contacto_aside {
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+    .contact_form {
+        align-items: center;
+        margin-right: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contacto_container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 0;
+        padding: 0;
+    }
+    .contact_form {
+        margin: 0 1.5rem 3rem;
+    }
+    .form_nombre {
+        flex-direction: column;
+    }
+    .form_nombre input [type="text"] {
+        width: 100%;
+    }
+}

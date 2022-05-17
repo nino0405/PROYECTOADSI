@@ -1,0 +1,165 @@
+/*=========== LOGROS============*/
+
+.acercade_logros {
+    margin-top: 3rem;
+}
+
+.acercade_logros-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.acercade_logros-right>p {
+    margin: 1.6rem 0 2.5rem;
+}
+
+.logros_tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 1.5rem;
+}
+
+.logros_tarjeta {
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.logros_tarjeta:hover {
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem 0 rgba(0, 0, 0, 0.3);
+}
+
+.logros_icono {
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.logros_tarjeta:nth-child(2) .logros_icono {
+    background: var(--color-success);
+}
+
+.logros_tarjeta:nth-child(3) .logros_icono {
+    background: var(--color-primary);
+}
+
+.logros_tarjeta p {
+    margin-top: 1rem;
+}
+
+
+/*=============EQUIPO ===============*/
+
+.equipo {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.equipo_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.equipo_miembro {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.equipo_miembro:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.equipo_miembros-image img {
+    filter: saturate(0);
+}
+
+.equipo_miembro:hover img {
+    filter: saturate(1);
+}
+
+.equipo_miembros-info * {
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.equipo_miembros-info p {
+    color: var(--color-light);
+}
+
+.equipo_miembros-socials {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.equipo_miembro:hover .equipo_miembros-socials {
+    right: 0;
+}
+
+.equipo_miembros-socials a {
+    padding: 1rem;
+}
+
+
+/*================== TABLETAS DE CUNSULTA DE MEDIOS==============*/
+
+@media screen and (max-width:1024px) {
+    .acercade_logros {
+        margin-top: 2rem;
+    }
+    .acercade_logros-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .acercade_logros-left {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .equipo_container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    .equipo_miembro {
+        padding: 1rem;
+    }
+}
+
+
+/*============== TABLETA  DE MEDIOS===========*/
+
+@media screen and (max-width: 600px) {
+    .logros_tarjetas {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .equipo_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .equipo_miembro {
+        padding: 0;
+    }
+    .equipo_miembro p {
+        margin-bottom: 1.5rem;
+    }
+}
